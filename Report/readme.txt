@@ -8,6 +8,6 @@ To execute the code:
 To be included in the repo:
 1. The train.py and test.py split is to be done. 
 2. VIsualization in tensorboard is to be done and screenshot is to be attached.
-3. The report with figures for the selection of optimum hyperparameters is to be committed.
+3. The report with figures for the selection of optimum hyperparameters is to be comitted.
 
 Will ensure that all the things are done by 4/24/2018.
