@@ -174,7 +174,6 @@ def main(unused_argv):
         eval_data = np.float32 (eval_data)
         eval_labels = np.concatenate ((test_labels_face, test_labels_non_face), axis=0)
 
-        writer = tf.summary.FileWriter('C:/Users/Aravind/Desktop/Nascent', graph = tf.get_default_graph())
 
         # Create the Estimator
         face_classifier = tf.estimator.Estimator (model_fn=cnn_model_fn)
@@ -197,11 +196,7 @@ def main(unused_argv):
         print("................................................................................")
         val = eval_results["accuracy"]
         print("Eval_results: ",val)
-        tf.scalar_summary ("Loss", loss)
-        tf.scalar.summary ("Acuracy", val)
-        summary_op = tf.summary.merge_all()
 
-        writer.add_summary(summary)
         total_val = total_val + val
         for i in b:
             os.rename("/Users/Aravind/Desktop/Nascent/testing/mountain_bike/mountain_bike_"+ str(i)+ ".jpg", "/Users/Aravind/Desktop/Nascent/training/mountain_bikes/mountain_bike_"+ str(i)+ ".jpg")
